@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
 import { FAQSchema } from "@/components/FAQSchema";
 import { FAQList } from "@/components/UI";
 import { faqs } from "@/data/site";
@@ -136,7 +135,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="relative mt-12 grid gap-5 md:grid-cols-4 md:px-5">
+          <div className="relative mt-8 grid gap-5 md:-mb-8 md:grid-cols-4 md:px-5">
             {quickLinks.map((item) => (
               <Link
                 href={item.href}
@@ -155,7 +154,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-cream px-4 py-9">
+      <section className="bg-cream px-4 pt-16 pb-9 md:pt-20">
         <div className="mx-auto max-w-7xl rounded-lg border border-water/30 bg-river p-6">
           <div className="grid items-center gap-6 md:grid-cols-[140px_1fr]">
             <div className="grid h-28 w-28 place-items-center rounded-full bg-water/15 text-forest">
@@ -180,10 +179,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <div className="mx-auto max-w-7xl px-4">
-        <AdSlot slot="home-after-intro" format="horizontal" />
-      </div>
 
       <section className="bg-[#f4efe6] px-4 py-12">
         <div className="mx-auto max-w-7xl">
@@ -225,10 +220,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <div className="mx-auto max-w-7xl px-4 py-8">
-        <AdSlot slot="home-mid-content" format="horizontal" />
-      </div>
 
       <section className="bg-white px-4 py-10">
         <div className="mx-auto max-w-7xl">
