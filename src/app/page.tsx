@@ -1,65 +1,87 @@
 import Image from "next/image";
+import Link from "next/link";
+import { AdSlot } from "@/components/AdSlot";
+import { FAQSchema } from "@/components/FAQSchema";
+import { AdviceBox, Card, FAQList, Section } from "@/components/UI";
+import { faqs, guides, quickCards, siteConfig } from "@/data/site";
 
 export default function Home() {
+  const quickFaqs = faqs.slice(0, 5);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <>
+      <FAQSchema items={quickFaqs} />
+      <section className="bg-cream">
+        <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 md:grid-cols-[1.05fr_0.95fr] md:items-center md:py-16">
+          <div>
+            <h1 className="font-serif text-4xl font-bold leading-tight text-forest md:text-6xl">
+              Gole del Calore: guida completa per visitarle
+            </h1>
+            <p className="mt-5 text-lg leading-8 text-moss">
+              Sentieri, parcheggi, attivita, canoe, pedalo e consigli pratici
+              per organizzare la tua visita tra Felitto e Magliano.
+            </p>
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <a href={siteConfig.mapsUrl} target="_blank" className="btn-primary">
+                Apri su Google Maps
+              </a>
+              <Link href="/sentieri" className="btn-secondary">
+                Scopri i sentieri
+              </Link>
+              <Link href="/cosa-portare" className="btn-secondary">
+                Cosa portare
+              </Link>
+            </div>
+          </div>
+          <div className="relative min-h-80 overflow-hidden rounded-lg">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/gole-del-calore-hero.png"
+              alt="Fiume tra gole rocciose e vegetazione"
+              fill
+              priority
+              className="object-cover"
+              sizes="(min-width: 768px) 48vw, 100vw"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <Section title="Info rapide">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {quickCards.map((card) => (
+            <Card key={card.title} {...card} />
+          ))}
+        </div>
+      </Section>
+
+      <section className="bg-river">
+        <div className="mx-auto max-w-6xl px-4 py-10">
+          <AdviceBox>
+            Questo sito non e ufficiale. Orari, accessi, noleggi, divieti e
+            condizioni del fiume possono cambiare. Verificare prima della
+            partenza.
+          </AdviceBox>
+        </div>
+      </section>
+
+      <div className="mx-auto max-w-6xl px-4 py-2">
+        <AdSlot slot="home-after-intro" format="horizontal" />
+      </div>
+
+      <Section
+        title="FAQ rapide"
+        text="Risposte brevi alle domande piu cercate prima di partire."
+      >
+        <FAQList items={quickFaqs} />
+      </Section>
+
+      <Section title="Guide utili" text="Struttura pronta per aggiungere articoli blog.">
+        <div className="grid gap-4 md:grid-cols-3">
+          {guides.map((guide) => (
+            <Card key={guide.title} {...guide} />
+          ))}
+        </div>
+      </Section>
+    </>
   );
 }
