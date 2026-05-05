@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { FAQSchema } from "@/components/FAQSchema";
-import { AdviceBox, Card, FAQList, Section } from "@/components/UI";
+import { Card, FAQList, Section } from "@/components/UI";
 import { faqs, guides, quickCards, siteConfig } from "@/data/site";
 
 export default function Home() {
@@ -53,16 +53,6 @@ export default function Home() {
           ))}
         </div>
       </Section>
-
-      <section className="bg-river">
-        <div className="mx-auto max-w-6xl px-4 py-10">
-          <AdviceBox>
-            Questo sito non e ufficiale. Orari, accessi, noleggi, divieti e
-            condizioni del fiume possono cambiare. Verificare prima della
-            partenza.
-          </AdviceBox>
-        </div>
-      </section>
 
       <div className="mx-auto max-w-6xl px-4 py-2">
         <AdSlot slot="home-after-intro" format="horizontal" />
