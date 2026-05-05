@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Gole del Calore Guide",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.goledelcaloreguide.it",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://gole-del-calore.vercel.app",
   description:
     "Guida indipendente alle Gole del Calore tra Felitto, Remolino e Magliano Vetere.",
   ogImage: "/gole-del-calore-hero.png",
