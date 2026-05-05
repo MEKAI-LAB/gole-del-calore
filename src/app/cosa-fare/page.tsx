@@ -15,6 +15,8 @@ export default function CosaFarePage() {
       <PageHero
         title="Cosa fare alle Gole del Calore"
         text="Idee pratiche per una visita lenta, sportiva o in famiglia. Alcune attivita sono stagionali e vanno confermate."
+        image="/canoa-gole-calore.jpg"
+        imageAlt="Canoa sul fiume tra rocce e bosco"
       />
 
       <Section title="Attivita">

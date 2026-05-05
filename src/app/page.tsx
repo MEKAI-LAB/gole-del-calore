@@ -45,28 +45,32 @@ const articles = [
     title: "Le Gole del Calore: cosa sono e dove si trovano",
     text: "Tutto quello che c'e da sapere sulle Gole del Calore tra Felitto e Magliano.",
     href: "/come-arrivare",
-    crop: "50% 42%",
+    image: "/ponte-gole-calore.jpg",
+    alt: "Ponte in pietra sul fiume Calore",
   },
   {
     tag: "Sentieri",
     title: "I migliori sentieri da percorrere",
     text: "Percorsi per tutti i livelli tra boschi, ponti, mulini e viste sul fiume.",
     href: "/sentieri",
-    crop: "32% 48%",
+    image: "/sentiero-gole-calore.jpg",
+    alt: "Escursionisti su un sentiero nel bosco",
   },
   {
     tag: "Cosa fare",
     title: "Canoe, pedalo e attivita sul fiume",
     text: "Vivi le Gole del Calore dall'acqua: noleggi, consigli e regole utili.",
     href: "/cosa-fare",
-    crop: "58% 70%",
+    image: "/canoa-gole-calore.jpg",
+    alt: "Canoa sul fiume tra le gole",
   },
   {
     tag: "Nei dintorni",
     title: "Cosa vedere nei dintorni",
     text: "Borghi, siti storici e sapori locali da scoprire prima o dopo la tua visita.",
     href: "/chi-siamo",
-    crop: "80% 40%",
+    image: "/borghi-cilento.jpg",
+    alt: "Borgo collinare nel Cilento",
   },
 ];
 
@@ -109,10 +113,11 @@ export default function Home() {
       <section className="relative overflow-hidden bg-forest">
         <div className="absolute inset-0">
           <Image
-            src="/gole-del-calore-hero.png"
+            src="/gole-del-calore-hero.jpg"
             alt="Fiume tra gole rocciose e vegetazione"
             fill
             priority
+            unoptimized
             className="object-cover"
             sizes="100vw"
           />
@@ -195,11 +200,11 @@ export default function Home() {
               <article key={article.title} className="overflow-hidden rounded-lg bg-white shadow-sm">
                 <div className="relative h-48">
                   <Image
-                    src="/gole-del-calore-hero.png"
-                    alt=""
+                    src={article.image}
+                    alt={article.alt}
                     fill
+                    unoptimized
                     className="object-cover"
-                    style={{ objectPosition: article.crop }}
                     sizes="(min-width: 768px) 25vw, 100vw"
                   />
                 </div>

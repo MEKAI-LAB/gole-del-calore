@@ -14,6 +14,8 @@ export default function CosaPortarePage() {
       <PageHero
         title="Cosa portare alle Gole del Calore"
         text="Checklist semplice per evitare errori comuni. Lo smartphone prende poco in alcuni punti: salva mappe e info prima."
+        image="/ponte-gole-calore.jpg"
+        imageAlt="Ponte in pietra sul fiume Calore"
       />
 
       <Section title="Checklist pratica">

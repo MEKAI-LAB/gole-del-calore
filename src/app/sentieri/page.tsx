@@ -15,6 +15,8 @@ export default function SentieriPage() {
       <PageHero
         title="Sentieri alle Gole del Calore"
         text="Percorsi indicativi per scegliere la visita giusta. Le condizioni possono cambiare: controlla sempre tracce e informazioni aggiornate."
+        image="/sentiero-gole-calore.jpg"
+        imageAlt="Escursionisti su un sentiero nel bosco"
       />
 
       <Section title="Lista sentieri">

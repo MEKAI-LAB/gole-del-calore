@@ -3,7 +3,7 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://gole-del-calore.vercel.app",
   description:
     "Guida indipendente alle Gole del Calore tra Felitto, Remolino e Magliano Vetere.",
-  ogImage: "/gole-del-calore-hero.png",
+  ogImage: "/gole-del-calore-hero.jpg",
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=Localit%C3%A0%20Remolino%2C%20Felitto%2C%20SA",
 };

@@ -15,6 +15,8 @@ export default function ComeArrivarePage() {
       <PageHero
         title="Come arrivare alle Gole del Calore"
         text="Il punto piu usato per una prima visita e Felitto, localita Remolino. Da qui partono passeggiate, aree di sosta e molte attivita sul fiume."
+        image="/borghi-cilento.jpg"
+        imageAlt="Borgo collinare nel Cilento"
       >
         <a href={siteConfig.mapsUrl} target="_blank" className="btn-primary">
           Apri su Google Maps

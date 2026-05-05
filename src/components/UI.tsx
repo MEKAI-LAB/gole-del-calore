@@ -1,23 +1,43 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
 export function PageHero({
   title,
   text,
+  image,
+  imageAlt = "",
   children,
 }: {
   title: string;
   text: string;
+  image?: string;
+  imageAlt?: string;
   children?: ReactNode;
 }) {
   return (
     <section className="bg-cream">
-      <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
-        <h1 className="max-w-4xl font-serif text-4xl font-bold leading-tight text-forest md:text-6xl">
-          {title}
-        </h1>
-        <p className="mt-5 max-w-3xl text-lg leading-8 text-moss">{text}</p>
-        {children ? <div className="mt-7">{children}</div> : null}
+      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 md:grid-cols-[1fr_0.9fr] md:items-center md:py-16">
+        <div>
+          <h1 className="max-w-4xl font-serif text-4xl font-bold leading-tight text-forest md:text-6xl">
+            {title}
+          </h1>
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-moss">{text}</p>
+          {children ? <div className="mt-7">{children}</div> : null}
+        </div>
+        {image ? (
+          <div className="relative min-h-72 overflow-hidden rounded-lg shadow-sm">
+            <Image
+              src={image}
+              alt={imageAlt}
+              fill
+              unoptimized
+              className="object-cover"
+              sizes="(min-width: 768px) 45vw, 100vw"
+              priority
+            />
+          </div>
+        ) : null}
       </div>
     </section>
   );
