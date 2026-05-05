@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { AdSlot } from "@/components/AdSlot";
 import { Card, PageHero, Section } from "@/components/UI";
 import { activities } from "@/data/site";
 
@@ -26,10 +25,6 @@ export default function CosaFarePage() {
           ))}
         </div>
       </Section>
-
-      <div className="mx-auto max-w-6xl px-4">
-        <AdSlot slot="cosa-fare-middle" format="horizontal" />
-      </div>
 
       <Section title="Nota sicurezza">
         <p className="max-w-3xl rounded-lg bg-white p-5 leading-8 text-moss">

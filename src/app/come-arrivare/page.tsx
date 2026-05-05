@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { AdSlot } from "@/components/AdSlot";
 import { AdviceBox, PageHero, Section } from "@/components/UI";
 import { siteConfig } from "@/data/site";
 
@@ -57,10 +56,6 @@ export default function ComeArrivarePage() {
           piano e considera traffico nei weekend.
         </p>
       </Section>
-
-      <div className="mx-auto max-w-6xl px-4">
-        <AdSlot slot="arrivare-middle" format="horizontal" />
-      </div>
 
       <Section title="Parcheggi">
         <div className="grid gap-4 md:grid-cols-2">
