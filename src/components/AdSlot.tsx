@@ -13,7 +13,7 @@ export function AdSlot({
 }: AdSlotProps) {
   return (
     <div
-      className={`ad-slot rounded-lg border border-dashed border-forest/25 bg-white/55 p-4 text-center text-xs text-forest/60 ${className}`}
+      className={`ad-slot rounded-lg border border-sand/70 bg-[#f4efe6] p-6 text-center text-xs uppercase tracking-[0.18em] text-forest/45 ${className}`}
       data-ad-slot={slot}
       data-ad-format={format}
       data-full-width-responsive={responsive ? "true" : "false"}
@@ -21,6 +21,7 @@ export function AdSlot({
     >
       {/* Struttura pronta per Google AdSense. Inserire qui lo script reale dopo approvazione account. */}
       Spazio pubblicitario
+      <span className="block pt-1 normal-case tracking-normal">970x90</span>
     </div>
   );
 }

@@ -33,6 +33,10 @@ body {
   font-family: var(--font-source-sans), Arial, sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 .btn-primary {
   display: inline-flex;
   min-height: 44px;
@@ -56,4 +60,8 @@ body {
   padding: 0.7rem 1rem;
   font-weight: 700;
   color: #173b2d;
+}
+
+.hero-shadow {
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
 }
