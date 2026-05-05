@@ -135,7 +135,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="relative mt-8 grid gap-5 md:-mb-8 md:grid-cols-4 md:px-5">
+          <div className="relative mt-8 grid gap-5 md:-mb-16 md:grid-cols-4 md:px-5">
             {quickLinks.map((item) => (
               <Link
                 href={item.href}
@@ -154,7 +154,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-cream px-4 pt-16 pb-9 md:pt-20">
+      <section className="bg-cream px-4 pt-24 pb-9 md:pt-28">
         <div className="mx-auto max-w-7xl rounded-lg border border-water/30 bg-river p-6">
           <div className="grid items-center gap-6 md:grid-cols-[140px_1fr]">
             <div className="grid h-28 w-28 place-items-center rounded-full bg-water/15 text-forest">
