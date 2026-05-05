@@ -47,6 +47,13 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       className={`${sourceSans.variable} ${lora.variable}`}
     >
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8111339542021351"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
         <Header />
         <main>{children}</main>

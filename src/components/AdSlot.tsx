@@ -19,7 +19,7 @@ export function AdSlot({
       data-full-width-responsive={responsive ? "true" : "false"}
       aria-label="Spazio pubblicitario"
     >
-      {/* Struttura pronta per Google AdSense. Inserire qui lo script reale dopo approvazione account. */}
+      {/* Script AdSense caricato nel layout. Inserire data-ad-slot reale quando Google fornisce gli slot. */}
       Spazio pubblicitario
       <span className="block pt-1 normal-case tracking-normal">970x90</span>
     </div>
