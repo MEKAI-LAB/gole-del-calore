@@ -26,7 +26,7 @@ export function Header() {
           <Link href="/sentieri" className="hover:text-water">Sentieri</Link>
           <Link href="/cosa-fare" className="hover:text-water">Cosa fare</Link>
           <Link href="/come-arrivare" className="hover:text-water">Informazioni</Link>
-          <Link href="/cosa-portare" className="hover:text-water">Guida</Link>
+          <Link href="/guide" className="hover:text-water">Guide</Link>
           <Link href="/faq" className="hover:text-water">FAQ</Link>
         </nav>
         <a

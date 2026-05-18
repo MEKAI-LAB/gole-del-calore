@@ -15,6 +15,7 @@ export const navItems = [
   { label: "Sentieri", href: "/sentieri" },
   { label: "Cosa fare", href: "/cosa-fare" },
   { label: "Cosa portare", href: "/cosa-portare" },
+  { label: "Guide", href: "/guide" },
   { label: "FAQ", href: "/faq" },
 ];
 
@@ -24,6 +25,7 @@ export const pages = [
   { href: "/sentieri", priority: 0.9 },
   { href: "/cosa-fare", priority: 0.85 },
   { href: "/cosa-portare", priority: 0.8 },
+  { href: "/guide", priority: 0.85 },
   { href: "/faq", priority: 0.8 },
   { href: "/chi-siamo", priority: 0.5 },
   { href: "/contatti", priority: 0.5 },

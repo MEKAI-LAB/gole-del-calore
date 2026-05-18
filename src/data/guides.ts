@@ -185,4 +185,159 @@ export const guidePages = [
       },
     ],
   },
+  {
+    slug: "dove-parcheggiare",
+    title: "Dove parcheggiare alle Gole del Calore",
+    description:
+      "Consigli pratici su parcheggi, orari di arrivo, area Remolino e cosa verificare prima di lasciare l'auto.",
+    intro:
+      "Il parcheggio e una delle prime cose da chiarire prima di visitare le Gole del Calore. La zona piu cercata e Remolino, nel territorio di Felitto, ma disponibilita e regole possono cambiare in base a stagione e afflusso.",
+    sections: [
+      {
+        title: "Perche arrivare presto",
+        paragraphs: [
+          "Nei weekend estivi e nei giorni festivi l'area vicino al fiume puo riempirsi rapidamente. Arrivare al mattino permette di scegliere con piu calma, evitare le ore calde e non perdere tempo cercando posto quando l'afflusso e gia alto.",
+          "Se parti da lontano, considera i tempi reali delle strade interne. Nel Cilento i chilometri non raccontano tutto: curve, attraversamenti dei paesi e traffico locale possono allungare la percorrenza.",
+        ],
+      },
+      {
+        title: "Area Remolino",
+        paragraphs: [
+          "Remolino e comoda per una prima visita perche avvicina al fiume e ai punti piu noti. Proprio per questo e anche l'area dove e piu facile trovare affollamento nei periodi di punta.",
+          "Prima di partire controlla se ci sono indicazioni locali su sosta, tariffe, accessi o eventuali limitazioni temporanee. Non lasciare l'auto lungo passaggi stretti, accessi agricoli o vie di emergenza.",
+        ],
+      },
+      {
+        title: "Alternative e buon senso",
+        paragraphs: [
+          "Se l'area piu vicina e piena, torna verso il paese e chiedi indicazioni. Una soluzione un po' piu distante ma regolare e sempre migliore di una sosta improvvisata che crea problemi ad altri visitatori o residenti.",
+          "Porta contanti, acqua e scarpe comode gia dall'auto. Se devi camminare qualche minuto in piu, sarai comunque preparato.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "cosa-vedere-a-felitto",
+    title: "Cosa vedere a Felitto oltre alle Gole del Calore",
+    description:
+      "Idee per completare la visita: borgo, pause, punti ristoro, passeggiate e consigli per non limitarsi solo al fiume.",
+    intro:
+      "Felitto non e solo il punto di accesso piu comodo alle Gole del Calore. Il borgo puo diventare una parte utile della giornata, soprattutto se vuoi mangiare, fare una pausa o organizzare meglio il rientro.",
+    sections: [
+      {
+        title: "Il borgo come base",
+        paragraphs: [
+          "Prima o dopo la visita al fiume, passare da Felitto aiuta a dare contesto al territorio. Il paese e una base pratica per orientarsi, cercare punti ristoro e chiedere informazioni aggiornate quando necessario.",
+          "Se arrivi presto, puoi prima scendere verso Remolino e poi tenere il borgo per il pranzo o il pomeriggio. Se invece arrivi nelle ore piu calde, valuta una pausa in paese prima di camminare.",
+        ],
+      },
+      {
+        title: "Mangiare e fare una sosta",
+        paragraphs: [
+          "Nel Cilento interno aperture e disponibilita possono variare, quindi conviene chiamare prima ristoranti o agriturismi, soprattutto nei weekend e in alta stagione.",
+          "Una sosta organizzata rende la giornata piu semplice: puoi ricaricare acqua, usare servizi, evitare di mangiare in modo improvvisato vicino al fiume e ripartire con calma.",
+        ],
+      },
+      {
+        title: "Abbinare natura e paese",
+        paragraphs: [
+          "L'errore piu comune e pensare solo al punto sul fiume. In realta una visita riuscita unisce acqua, cammino, borgo e tempi lenti. In questo modo anche una giornata breve diventa piu completa.",
+          "Rispetta residenti, strade strette e spazi pubblici. I piccoli paesi interni sono parte dell'esperienza, non solo un parcheggio prima della natura.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "errori-da-evitare",
+    title: "Errori da evitare alle Gole del Calore",
+    description:
+      "Gli errori piu comuni prima e durante la visita alle Gole del Calore: orari, scarpe, acqua, parcheggio e informazioni non verificate.",
+    intro:
+      "Molti problemi alle Gole del Calore nascono da aspettative sbagliate: arrivare tardi, vestirsi come per una spiaggia, non portare acqua o pensare che tutti i servizi siano sempre disponibili.",
+    sections: [
+      {
+        title: "Arrivare senza informazioni aggiornate",
+        paragraphs: [
+          "Il primo errore e partire dando per scontati parcheggi, noleggi, accessi o possibilita di bagno. In un ambiente naturale e stagionale queste informazioni possono cambiare.",
+          "Prima di metterti in viaggio controlla meteo, condizioni del fiume, eventuali divieti e disponibilita dei servizi che ti interessano. Se una attivita e centrale per la giornata, verifica direttamente con l'operatore.",
+        ],
+      },
+      {
+        title: "Scarpe e acqua sbagliate",
+        paragraphs: [
+          "Infradito, suole lisce e scarpe nuove non testate possono rovinare anche una passeggiata breve. Tra pietre, tratti umidi e fondo irregolare serve stabilita.",
+          "Porta acqua sufficiente. Vicino al fiume puo sembrare tutto fresco, ma camminare in estate richiede comunque idratazione. Avere acqua in piu e meglio che cercarla quando sei gia lontano dall'auto.",
+        ],
+      },
+      {
+        title: "Forzare i tempi",
+        paragraphs: [
+          "Un altro errore e riempire troppo la giornata: sentiero lungo, bagno, canoa, pranzo, borgo e rientro. Se hai poche ore, scegli due cose e falle con calma.",
+          "Lascia margine per parcheggio, soste, caldo e imprevisti. Le visite migliori sono quelle in cui non devi correre per rispettare un programma troppo stretto.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "itinerario-un-giorno",
+    title: "Itinerario di un giorno alle Gole del Calore",
+    description:
+      "Come organizzare una giornata intera tra Felitto, Remolino, sentieri, sosta al fiume e visita al borgo.",
+    intro:
+      "Con una giornata intera puoi vivere le Gole del Calore con piu calma: arrivo presto, camminata, pausa al fiume, eventuale attivita in acqua e visita a Felitto.",
+    sections: [
+      {
+        title: "Mattina: arrivo e sentiero",
+        paragraphs: [
+          "Parti presto e punta l'area di Felitto o Remolino. La mattina e il momento migliore per camminare: temperature piu basse, meno affollamento e luce buona per fotografie.",
+          "Scegli un percorso coerente con il tuo allenamento. Se non conosci la zona, evita di iniziare con tratti lunghi o poco segnalati. Una camminata media fatta bene vale piu di un anello affrontato con fretta.",
+        ],
+      },
+      {
+        title: "Pranzo e pausa al fiume",
+        paragraphs: [
+          "Dopo il sentiero, organizza una pausa. Puoi mangiare in paese o portare qualcosa, sempre rispettando l'ambiente e riportando via i rifiuti.",
+          "Se vuoi fare bagno, valuta le condizioni reali dell'acqua. Se vuoi fare canoa, kayak o pedalo, verifica prima disponibilita e orari. Non lasciare queste scelte all'ultimo minuto nei giorni affollati.",
+        ],
+      },
+      {
+        title: "Pomeriggio: Felitto e rientro",
+        paragraphs: [
+          "Nel pomeriggio puoi visitare Felitto, fare una sosta in un punto ristoro e rientrare con calma. Evita di iniziare sentieri nuovi tardi, soprattutto se non conosci tempi e segnaletica.",
+          "Prima di andare via controlla di non lasciare rifiuti, asciuga e cambia scarpe se hai camminato vicino all'acqua, e conserva eventuali note utili per una prossima visita.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "cosa-vedere-nei-dintorni",
+    title: "Cosa vedere nei dintorni delle Gole del Calore",
+    description:
+      "Idee per allungare la visita nel Cilento interno tra borghi, paesaggi, soste lente e percorsi vicini.",
+    intro:
+      "Le Gole del Calore possono essere il centro della giornata, ma non devono essere l'unica tappa. Il Cilento interno offre borghi, paesaggi rurali e soste tranquille da abbinare alla visita.",
+    sections: [
+      {
+        title: "Borghi interni",
+        paragraphs: [
+          "Felitto e Magliano sono i riferimenti piu immediati per chi visita le gole. Fermarsi nei borghi aiuta a capire meglio il territorio, trovare punti ristoro e distribuire la giornata senza passare tutto il tempo vicino al fiume.",
+          "I paesi interni richiedono tempi lenti. Parcheggia con attenzione, rispetta spazi e residenti, e controlla aperture se hai in mente ristoranti, bar o visite specifiche.",
+        ],
+      },
+      {
+        title: "Paesaggio e fotografia",
+        paragraphs: [
+          "Le strade interne offrono scorci su colline, boschi e valloni. Se ami fotografare, tieni tempo per fermarti in sicurezza dove consentito, senza bloccare carreggiate strette.",
+          "La luce migliore e spesso al mattino o nel tardo pomeriggio. Nelle ore centrali il contrasto puo essere forte, soprattutto vicino a rocce chiare e acqua.",
+        ],
+      },
+      {
+        title: "Come costruire un giro sensato",
+        paragraphs: [
+          "Non aggiungere troppe tappe. Meglio scegliere Gole del Calore, pranzo in paese e una sosta panoramica, invece di correre tra molti luoghi senza viverne nessuno.",
+          "Se dormi nel Cilento, puoi dividere le esperienze: un giorno natura e fiume, un altro borghi e costa. Questo rende la visita meno faticosa e piu utile anche per famiglie.",
+        ],
+      },
+    ],
+  },
 ];

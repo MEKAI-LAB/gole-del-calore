@@ -44,7 +44,7 @@ const articles = [
     tag: "Guida",
     title: "Le Gole del Calore: cosa sono e dove si trovano",
     text: "Tutto quello che c'e da sapere sulle Gole del Calore tra Felitto e Magliano.",
-    href: "/come-arrivare",
+    href: "/guide/dove-si-trovano-gole-del-calore",
     image: "/ponte-gole-calore.jpg",
     alt: "Ponte in pietra sul fiume Calore",
   },
@@ -52,7 +52,7 @@ const articles = [
     tag: "Sentieri",
     title: "I migliori sentieri da percorrere",
     text: "Percorsi per tutti i livelli tra boschi, ponti, mulini e viste sul fiume.",
-    href: "/sentieri",
+    href: "/guide/itinerario-un-giorno",
     image: "/sentiero-gole-calore.jpg",
     alt: "Escursionisti su un sentiero nel bosco",
   },
@@ -60,7 +60,7 @@ const articles = [
     tag: "Cosa fare",
     title: "Canoe, pedalo e attivita sul fiume",
     text: "Vivi le Gole del Calore dall'acqua: noleggi, consigli e regole utili.",
-    href: "/cosa-fare",
+    href: "/guide/canoa-pedalo-remolino",
     image: "/canoa-gole-calore.jpg",
     alt: "Canoa sul fiume tra le gole",
   },
@@ -68,7 +68,7 @@ const articles = [
     tag: "Nei dintorni",
     title: "Cosa vedere nei dintorni",
     text: "Borghi, siti storici e sapori locali da scoprire prima o dopo la tua visita.",
-    href: "/guide/visitare-con-bambini",
+    href: "/guide/cosa-vedere-nei-dintorni",
     image: "/borghi-cilento.jpg",
     alt: "Borgo collinare nel Cilento",
   },
@@ -230,8 +230,8 @@ export default function Home() {
             <h2 className="font-serif text-3xl font-bold text-forest">
               Guide e approfondimenti
             </h2>
-            <Link href="/sentieri" className="hidden text-sm font-bold uppercase text-forest md:block">
-              Vai ai sentieri -&gt;
+            <Link href="/guide" className="hidden text-sm font-bold uppercase text-forest md:block">
+              Vai a tutte le guide -&gt;
             </Link>
           </div>
           <div className="grid gap-5 md:grid-cols-4">
