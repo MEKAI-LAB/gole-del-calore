@@ -3,24 +3,25 @@ import Link from "next/link";
 import { FAQSchema } from "@/components/FAQSchema";
 import { FAQList } from "@/components/UI";
 import { faqs } from "@/data/site";
+import { guidePages } from "@/data/guides";
 
 const quickLinks = [
   {
     title: "Come arrivare",
     text: "Indicazioni stradali, parcheggi e mezzi pubblici.",
-    href: "/come-arrivare",
+    href: "/guide/dove-si-trovano-gole-del-calore",
     icon: "car",
   },
   {
     title: "Sentieri",
     text: "I percorsi piu belli tra natura, storia e panorami.",
-    href: "/sentieri",
+    href: "/guide/itinerario-mezza-giornata",
     icon: "hike",
   },
   {
     title: "Cosa fare",
     text: "Canoe, pedalo, bagno e altre attivita.",
-    href: "/cosa-fare",
+    href: "/guide/canoa-pedalo-remolino",
     icon: "canoe",
   },
   {
@@ -67,7 +68,7 @@ const articles = [
     tag: "Nei dintorni",
     title: "Cosa vedere nei dintorni",
     text: "Borghi, siti storici e sapori locali da scoprire prima o dopo la tua visita.",
-    href: "/chi-siamo",
+    href: "/guide/visitare-con-bambini",
     image: "/borghi-cilento.jpg",
     alt: "Borgo collinare nel Cilento",
   },
@@ -115,7 +116,7 @@ export default function Home() {
             src="/gole-del-calore-hero.jpg"
             alt="Fiume tra gole rocciose e vegetazione"
             fill
-            priority
+            loading="eager"
             unoptimized
             className="object-cover"
             sizes="100vw"
@@ -180,6 +181,49 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="bg-white px-4 py-12">
+        <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-[1.1fr_0.9fr]">
+          <div>
+            <h2 className="font-serif text-3xl font-bold text-forest">
+              Una guida pratica prima di partire
+            </h2>
+            <div className="mt-5 space-y-5 leading-8 text-moss">
+              <p>
+                Le Gole del Calore sono una delle aree naturali piu cercate del
+                Cilento interno. Il tratto tra Felitto, Remolino e Magliano
+                Vetere attira chi vuole camminare, stare vicino all&apos;acqua,
+                provare attivita stagionali o semplicemente passare qualche ora
+                in un paesaggio fresco e roccioso.
+              </p>
+              <p>
+                Questa guida nasce per rispondere alle domande pratiche che
+                vengono prima della visita: dove puntare il navigatore, quanto
+                tempo mettere in conto, cosa portare, quando evitare le ore piu
+                calde, come comportarsi vicino al fiume e quali informazioni
+                verificare prima di partire.
+              </p>
+              <p>
+                Il sito e indipendente e non ufficiale. Per orari, prezzi,
+                servizi, accessi, divieti e condizioni dei sentieri bisogna
+                sempre controllare fonti locali aggiornate.
+              </p>
+            </div>
+          </div>
+          <div className="rounded-lg bg-cream p-6">
+            <h3 className="font-serif text-2xl font-bold text-forest">
+              Per chi e utile
+            </h3>
+            <ul className="mt-4 grid gap-3 leading-7 text-moss">
+              <li>- visitatori alla prima volta alle Gole del Calore</li>
+              <li>- famiglie che vogliono capire tempi e difficolta</li>
+              <li>- escursionisti che cercano una base per scegliere il percorso</li>
+              <li>- chi vuole fare canoa, pedalo o bagno dove consentito</li>
+              <li>- turisti che arrivano da fuori Cilento per una giornata</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[#f4efe6] px-4 py-12">
         <div className="mx-auto max-w-7xl">
           <div className="mb-6 flex items-end justify-between gap-4">
@@ -187,7 +231,7 @@ export default function Home() {
               Guide e approfondimenti
             </h2>
             <Link href="/sentieri" className="hidden text-sm font-bold uppercase text-forest md:block">
-              Vai alla guida completa -&gt;
+              Vai ai sentieri -&gt;
             </Link>
           </div>
           <div className="grid gap-5 md:grid-cols-4">
@@ -216,6 +260,22 @@ export default function Home() {
                   </Link>
                 </div>
               </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-4 py-12">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="font-serif text-3xl font-bold text-forest">
+            Guide pratiche da leggere prima della visita
+          </h2>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {guidePages.map((guide) => (
+              <Link key={guide.slug} href={`/guide/${guide.slug}`} className="rounded-lg border border-forest/10 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+                <h3 className="font-serif text-xl font-bold text-forest">{guide.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-moss">{guide.description}</p>
+              </Link>
             ))}
           </div>
         </div>

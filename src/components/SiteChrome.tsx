@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { navItems, siteConfig } from "@/data/site";
+import { navItems, siteConfig, trustedSources } from "@/data/site";
 
 export function Header() {
   return (
@@ -54,6 +54,9 @@ export function Footer() {
             Guida indipendente e non ufficiale per organizzare una visita tra
             Felitto, Remolino e Magliano Vetere.
           </p>
+          <p className="mt-3 text-sm text-cream/70">
+            Ultimo aggiornamento: {siteConfig.lastUpdated}
+          </p>
         </div>
         <div>
           <p className="font-semibold">Guida</p>
@@ -74,6 +77,17 @@ export function Footer() {
             <Link href="/cookie-policy">Cookie policy</Link>
           </div>
         </div>
+      </div>
+      <div className="mx-auto max-w-6xl px-4 pb-8 text-xs leading-6 text-cream/60">
+        Fonti utili:{" "}
+        {trustedSources.map((source, index) => (
+          <span key={source.href}>
+            <a href={source.href} target="_blank" className="underline hover:text-white">
+              {source.label}
+            </a>
+            {index < trustedSources.length - 1 ? "; " : "."}
+          </span>
+        ))}
       </div>
     </footer>
   );

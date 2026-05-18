@@ -18,6 +18,24 @@ export default function SentieriPage() {
         imageAlt="Escursionisti su un sentiero nel bosco"
       />
 
+      <Section title="Come leggere questi percorsi">
+        <div className="max-w-3xl space-y-5 leading-8 text-moss">
+          <p>
+            I sentieri delle Gole del Calore non vanno scelti solo guardando la
+            distanza. Fondo, ombra, caldo, acqua, segnaletica e stagione possono
+            cambiare molto la difficolta percepita. Un percorso breve vicino al
+            fiume puo essere semplice in una giornata asciutta e piu delicato
+            dopo pioggia o piena.
+          </p>
+          <p>
+            Per una prima visita conviene partire da un itinerario breve in area
+            Remolino. Gli anelli piu lunghi verso Felitto e Magliano sono piu
+            interessanti per chi vuole camminare davvero e ha gia scarpe,
+            acqua, traccia offline e margine di tempo.
+          </p>
+        </div>
+      </Section>
+
       <Section title="Lista sentieri">
         <div className="grid gap-5">
           {trails.map((trail) => (
@@ -36,6 +54,39 @@ export default function SentieriPage() {
               <p className="mt-4 leading-7 text-moss">{trail.description}</p>
             </article>
           ))}
+        </div>
+      </Section>
+
+      <Section title="Quale scegliere">
+        <div className="grid gap-4 md:grid-cols-3">
+          <div className="rounded-lg bg-white p-5 leading-7 text-moss">
+            <h2 className="font-serif text-2xl font-bold text-forest">
+              Prima volta
+            </h2>
+            <p className="mt-3">
+              Scegli il percorso breve in area Remolino. Ti permette di capire
+              ambiente, accessi e tempi senza allontanarti troppo dai punti piu
+              frequentati.
+            </p>
+          </div>
+          <div className="rounded-lg bg-white p-5 leading-7 text-moss">
+            <h2 className="font-serif text-2xl font-bold text-forest">
+              Mezza giornata
+            </h2>
+            <p className="mt-3">
+              Valuta un anello da Felitto se sei abituato a camminare. Parti
+              presto e lascia margine per soste, caldo e foto.
+            </p>
+          </div>
+          <div className="rounded-lg bg-white p-5 leading-7 text-moss">
+            <h2 className="font-serif text-2xl font-bold text-forest">
+              Escursionisti
+            </h2>
+            <p className="mt-3">
+              I collegamenti verso Magliano e i tratti meno battuti richiedono
+              traccia aggiornata, passo sicuro e informazioni recenti.
+            </p>
+          </div>
         </div>
       </Section>
 

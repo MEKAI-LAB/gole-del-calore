@@ -6,6 +6,8 @@ export const siteConfig = {
   ogImage: "/gole-del-calore-hero.jpg",
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=Localit%C3%A0%20Remolino%2C%20Felitto%2C%20SA",
+  contactEmail: "redazione@legoledelcalore.it",
+  lastUpdated: "18 maggio 2026",
 };
 
 export const navItems = [
@@ -102,23 +104,23 @@ export const trails = [
 export const activities = [
   {
     title: "Trekking",
-    text: "La scelta principale. Parti presto, evita caldo forte e controlla la traccia.",
+    text: "La scelta principale per capire davvero il paesaggio. Parti presto, evita caldo forte e controlla la traccia prima di entrare nei tratti piu isolati.",
   },
   {
     title: "Bagno nel fiume",
-    text: "Possibile solo dove consentito e con acqua sicura. Rocce scivolose: scarpe da scoglio utili.",
+    text: "Possibile solo dove consentito e con acqua sicura. Il fondo cambia, le rocce sono scivolose e dopo la pioggia il fiume puo diventare pericoloso.",
   },
   {
     title: "Canoa",
-    text: "Attivita stagionale in zona Remolino. Orari, prezzi e prenotazioni vanno verificati.",
+    text: "Attivita stagionale nella zona di Remolino. Orari, prezzi, eta minima e prenotazioni vanno verificati con gli operatori locali prima di partire.",
   },
   {
     title: "Kayak",
-    text: "Alternativa piu sportiva alla canoa. Meglio chiedere condizioni e livello dell'acqua.",
+    text: "Alternativa piu sportiva alla canoa. Meglio chiedere condizioni, livello dell'acqua e tratto effettivamente percorribile nella giornata scelta.",
   },
   {
     title: "Pedalo",
-    text: "Opzione semplice per vedere il fiume dal basso. Disponibilita variabile.",
+    text: "Opzione semplice per vedere il fiume dal basso senza fare un trekking lungo. Disponibilita variabile in base a stagione e portata.",
   },
   {
     title: "Torrentismo",
@@ -134,7 +136,7 @@ export const activities = [
   },
   {
     title: "Visita a Felitto",
-    text: "Abbina il borgo alla natura. Utile anche per mangiare e chiedere info aggiornate.",
+    text: "Abbina il borgo alla natura. Utile anche per mangiare, comprare acqua, chiedere info aggiornate e completare la visita con piu calma.",
   },
 ];
 
@@ -172,52 +174,67 @@ export const faqs = [
   {
     question: "Dove si trovano le Gole del Calore?",
     answer:
-      "In Campania, nel Cilento interno, lungo il fiume Calore. Il tratto piu visitato e tra Felitto, localita Remolino, e Magliano Vetere/Magliano Nuovo.",
+      "Le Gole del Calore si trovano in Campania, nel Cilento interno, lungo il fiume Calore. Il tratto piu cercato dai visitatori e quello tra Felitto, localita Remolino, e l'area verso Magliano Vetere e Magliano Nuovo.",
   },
   {
     question: "Dove si parcheggia?",
     answer:
-      "Molti visitatori puntano l'area Remolino a Felitto. Posti, accessi e regole possono cambiare: verificare prima della partenza.",
+      "Molti visitatori puntano l'area Remolino a Felitto, perche e comoda per una prima visita e per le attivita sul fiume. Nei weekend estivi i posti possono finire presto. Accessi, tariffe e regole possono cambiare: verificare prima della partenza.",
   },
   {
     question: "Si puo fare il bagno?",
     answer:
-      "In alcuni punti si entra in acqua, ma dipende da stagione, portata, divieti e sicurezza. Verifica sempre sul posto.",
+      "In alcuni punti si entra in acqua, ma non va dato per scontato. Dipende da stagione, portata del fiume, divieti, meteo e sicurezza. Dopo piogge forti o acqua torbida e meglio evitare e chiedere conferma sul posto.",
   },
   {
     question: "Ci sono canoe e pedalo?",
     answer:
-      "Nella zona Remolino sono presenti attivita stagionali come canoa, kayak e pedalo. Orari e disponibilita vanno verificati.",
+      "Nella zona Remolino possono essere presenti attivita stagionali come canoa, kayak e pedalo. Orari, disponibilita, prezzi e prenotazione non sono sempre uguali: controllare con operatori locali prima di organizzare la giornata.",
   },
   {
     question: "Sono adatte ai bambini?",
     answer:
-      "Si per passeggiate brevi e aree semplici, con adulti attenti. I sentieri lunghi sono meglio per bambini abituati a camminare.",
+      "Si per passeggiate brevi e aree semplici, con adulti attenti e scarpe adatte. I sentieri lunghi, i tratti vicino all'acqua e le zone con fondo irregolare sono meglio per bambini gia abituati a camminare.",
   },
   {
     question: "Quanto dura la visita?",
     answer:
-      "Da 1-2 ore per una sosta breve a mezza giornata o giornata intera se fai sentieri e attivita sul fiume.",
+      "Una sosta breve puo durare 1-2 ore. Per passeggiata, pausa al fiume e rientro considera mezza giornata. Se vuoi fare sentieri piu lunghi, attivita in acqua e visita al borgo, metti in conto una giornata intera.",
   },
   {
     question: "Serve prenotare?",
     answer:
-      "Per camminare di solito no, ma per canoe, guide, gruppi e alta stagione e meglio controllare e prenotare.",
+      "Per camminare in autonomia di solito no, ma per canoe, pedalo, guide, gruppi numerosi e periodi di alta stagione e meglio controllare prima. Prenotare riduce il rischio di arrivare e non trovare disponibilita.",
   },
   {
     question: "Ci sono ristoranti?",
     answer:
-      "A Felitto e nei dintorni trovi punti ristoro, ma aperture e posti cambiano. In alta stagione conviene chiamare.",
+      "A Felitto e nei dintorni trovi punti ristoro, agriturismi e bar, ma aperture, giorni di chiusura e posti disponibili cambiano. In alta stagione conviene chiamare e non contare solo sull'improvvisazione.",
   },
   {
     question: "Qual e il periodo migliore?",
     answer:
-      "Primavera, inizio estate e autunno sono spesso piu comodi per camminare. In estate meglio mattina presto.",
+      "Primavera, inizio estate e autunno sono spesso i periodi piu comodi per camminare. In piena estate meglio mattina presto o tardo pomeriggio. Dopo piogge intense controlla sempre condizioni del fiume e sentieri.",
   },
   {
     question: "Il sito e ufficiale?",
     answer:
       "No. Questo sito e una guida indipendente e non ufficiale. Per orari, servizi, divieti e sicurezza verifica fonti locali aggiornate.",
+  },
+];
+
+export const trustedSources = [
+  {
+    label: "Comune di Felitto",
+    href: "https://www.comune.felitto.sa.it/",
+  },
+  {
+    label: "Parco Nazionale del Cilento, Vallo di Diano e Alburni",
+    href: "https://www.cilentoediano.it/",
+  },
+  {
+    label: "Google Maps - localita Remolino",
+    href: "https://www.google.com/maps/search/?api=1&query=Localit%C3%A0%20Remolino%2C%20Felitto%2C%20SA",
   },
 ];
 
