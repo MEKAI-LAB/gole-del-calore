@@ -14,6 +14,21 @@ const lora = Lora({
   subsets: ["latin"],
 });
 
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Gole del Calore Guide",
+  url: siteConfig.url,
+  inLanguage: "it-IT",
+  description: siteConfig.description,
+  publisher: {
+    "@type": "Organization",
+    name: "Gole del Calore Guide",
+    url: siteConfig.url,
+    email: siteConfig.contactEmail,
+  },
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
@@ -55,6 +70,10 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
         <Header />
         <main>{children}</main>
         <Footer />

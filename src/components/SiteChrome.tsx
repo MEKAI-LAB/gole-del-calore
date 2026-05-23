@@ -21,7 +21,7 @@ export function Header() {
             <span className="block text-sm text-moss">Guida indipendente</span>
           </span>
         </Link>
-        <nav className="hidden items-center gap-7 text-xs font-bold uppercase text-forest lg:flex">
+        <nav aria-label="Navigazione principale" className="hidden items-center gap-6 text-xs font-bold uppercase text-forest lg:flex">
           <Link href="/" className="border-b-2 border-water pb-1">Home</Link>
           <Link href="/sentieri" className="hover:text-water">Sentieri</Link>
           <Link href="/cosa-fare" className="hover:text-water">Cosa fare</Link>
@@ -40,6 +40,17 @@ export function Header() {
           </svg>
         </a>
       </div>
+      <nav
+        aria-label="Navigazione mobile"
+        className="mx-auto flex max-w-7xl gap-4 overflow-x-auto border-t border-forest/10 px-4 py-2 text-xs font-bold uppercase text-forest lg:hidden"
+      >
+        <Link href="/" className="shrink-0">Home</Link>
+        {navItems.map((item) => (
+          <Link key={item.href} href={item.href} className="shrink-0">
+            {item.label}
+          </Link>
+        ))}
+      </nav>
     </header>
   );
 }
@@ -72,6 +83,7 @@ export function Footer() {
           <p className="font-semibold">Sito</p>
           <div className="mt-3 grid gap-2 text-sm text-cream/75">
             <Link href="/chi-siamo">Chi siamo</Link>
+            <Link href="/fonti">Fonti e aggiornamenti</Link>
             <Link href="/contatti">Contatti</Link>
             <Link href="/privacy-policy">Privacy policy</Link>
             <Link href="/cookie-policy">Cookie policy</Link>

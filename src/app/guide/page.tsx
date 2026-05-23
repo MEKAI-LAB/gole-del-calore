@@ -28,9 +28,9 @@ export default function GuideIndexPage() {
               href={`/guide/${guide.slug}`}
               className="rounded-lg bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
             >
-              <h2 className="font-serif text-2xl font-bold text-forest">
+              <h3 className="font-serif text-2xl font-bold text-forest">
                 {guide.title}
-              </h2>
+              </h3>
               <p className="mt-3 leading-7 text-moss">{guide.description}</p>
             </Link>
           ))}

@@ -7,7 +7,7 @@ export const siteConfig = {
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=Localit%C3%A0%20Remolino%2C%20Felitto%2C%20SA",
   contactEmail: "redazione@legoledelcalore.it",
-  lastUpdated: "18 maggio 2026",
+  lastUpdated: "24 maggio 2026",
 };
 
 export const navItems = [
@@ -27,6 +27,7 @@ export const pages = [
   { href: "/cosa-portare", priority: 0.8 },
   { href: "/guide", priority: 0.85 },
   { href: "/faq", priority: 0.8 },
+  { href: "/fonti", priority: 0.55 },
   { href: "/chi-siamo", priority: 0.5 },
   { href: "/contatti", priority: 0.5 },
   { href: "/privacy-policy", priority: 0.3 },
