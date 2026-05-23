@@ -27,6 +27,7 @@ export function Header() {
           <Link href="/cosa-fare" className="hover:text-water">Cosa fare</Link>
           <Link href="/come-arrivare" className="hover:text-water">Informazioni</Link>
           <Link href="/guide" className="hover:text-water">Guide</Link>
+          <Link href="/gole" className="rounded-full border border-forest/20 px-3 py-1 hover:border-water hover:text-water">Altre gole</Link>
           <Link href="/faq" className="hover:text-water">FAQ</Link>
         </nav>
         <a

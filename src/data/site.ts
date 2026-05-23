@@ -16,6 +16,7 @@ export const navItems = [
   { label: "Cosa fare", href: "/cosa-fare" },
   { label: "Cosa portare", href: "/cosa-portare" },
   { label: "Guide", href: "/guide" },
+  { label: "Altre gole", href: "/gole" },
   { label: "FAQ", href: "/faq" },
 ];
 
@@ -26,6 +27,7 @@ export const pages = [
   { href: "/cosa-fare", priority: 0.85 },
   { href: "/cosa-portare", priority: 0.8 },
   { href: "/guide", priority: 0.85 },
+  { href: "/gole", priority: 0.7 },
   { href: "/faq", priority: 0.8 },
   { href: "/fonti", priority: 0.55 },
   { href: "/chi-siamo", priority: 0.5 },
