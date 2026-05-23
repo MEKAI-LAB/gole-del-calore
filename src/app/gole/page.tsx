@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero, Section } from "@/components/UI";
 import { networkSites } from "@/data/networkSites";
+import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Guide alle gole del Cilento",
@@ -9,8 +10,36 @@ export const metadata: Metadata = {
 };
 
 export default function GoleNetworkPage() {
+  const pageUrl = `${siteConfig.url}/gole`;
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${pageUrl}#webpage`,
+    name: "Guide alle gole del Cilento",
+    description:
+      "Vista globale per navigare tra le guide indipendenti dedicate alle gole e alle aree naturali del Cilento.",
+    url: pageUrl,
+    inLanguage: "it-IT",
+    isPartOf: {
+      "@id": `${siteConfig.url}/#website`,
+    },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: networkSites.map((site, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: site.name,
+        url: site.href,
+      })),
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+      />
       <PageHero
         title="Guide alle gole del Cilento"
         text="Una vista unica per passare tra le guide indipendenti dedicate alle gole, ai fiumi e alle aree naturali del Cilento."

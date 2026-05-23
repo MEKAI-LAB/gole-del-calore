@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageHero, Section } from "@/components/UI";
 import { guidePages } from "@/data/guides";
+import { siteConfig } from "@/data/site";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -85,23 +86,32 @@ export default async function GuidePage({ params }: Props) {
     image: "/gole-del-calore-hero.jpg",
     alt: "Gole del Calore",
   };
+  const pageUrl = `${siteConfig.url}/guide/${guide.slug}`;
+  const organizationId = `${siteConfig.url}/#organization`;
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `${pageUrl}#article`,
     headline: guide.title,
     description: guide.description,
-    image: `${process.env.NEXT_PUBLIC_SITE_URL || "https://legoledelcalore.it"}${hero.image}`,
-    dateModified: "2026-05-24",
+    url: pageUrl,
+    image: [`${siteConfig.url}${hero.image}`],
+    datePublished: siteConfig.publishedDate,
+    dateModified: siteConfig.modifiedDate,
     inLanguage: "it-IT",
     author: {
       "@type": "Organization",
-      name: "Gole del Calore Guide",
+      "@id": organizationId,
+      name: siteConfig.name,
+      url: siteConfig.url,
     },
     publisher: {
       "@type": "Organization",
-      name: "Gole del Calore Guide",
+      "@id": organizationId,
+      name: siteConfig.name,
+      url: siteConfig.url,
     },
-    mainEntityOfPage: `${process.env.NEXT_PUBLIC_SITE_URL || "https://legoledelcalore.it"}/guide/${guide.slug}`,
+    mainEntityOfPage: pageUrl,
   };
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -111,19 +121,19 @@ export default async function GuidePage({ params }: Props) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: process.env.NEXT_PUBLIC_SITE_URL || "https://legoledelcalore.it",
+        item: siteConfig.url,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Guide",
-        item: `${process.env.NEXT_PUBLIC_SITE_URL || "https://legoledelcalore.it"}/guide`,
+        item: `${siteConfig.url}/guide`,
       },
       {
         "@type": "ListItem",
         position: 3,
         name: guide.title,
-        item: `${process.env.NEXT_PUBLIC_SITE_URL || "https://legoledelcalore.it"}/guide/${guide.slug}`,
+        item: pageUrl,
       },
     ],
   };

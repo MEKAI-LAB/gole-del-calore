@@ -14,19 +14,32 @@ const lora = Lora({
   subsets: ["latin"],
 });
 
-const websiteSchema = {
+const organizationId = `${siteConfig.url}/#organization`;
+const websiteId = `${siteConfig.url}/#website`;
+
+const globalSchema = {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "Gole del Calore Guide",
-  url: siteConfig.url,
-  inLanguage: "it-IT",
-  description: siteConfig.description,
-  publisher: {
-    "@type": "Organization",
-    name: "Gole del Calore Guide",
-    url: siteConfig.url,
-    email: siteConfig.contactEmail,
-  },
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": organizationId,
+      name: siteConfig.name,
+      url: siteConfig.url,
+      email: siteConfig.contactEmail,
+      logo: `${siteConfig.url}/favicon.ico`,
+    },
+    {
+      "@type": "WebSite",
+      "@id": websiteId,
+      name: siteConfig.name,
+      url: siteConfig.url,
+      inLanguage: "it-IT",
+      description: siteConfig.description,
+      publisher: {
+        "@id": organizationId,
+      },
+    },
+  ],
 };
 
 export const metadata: Metadata = {
@@ -72,7 +85,7 @@ export default function RootLayout({
       <body>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(globalSchema) }}
         />
         <Header />
         <main>{children}</main>
